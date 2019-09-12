@@ -11,7 +11,7 @@
                 <button type="button" class="btn btn-light" id="makeRequest">Make Request</button>
                 <button types="button" class="btn btn-light" id="showRequest">Show Request</button>
                 <button type="button" class="btn btn-light" id="saveRequest">Save Request</button>
-                <button type="button" class="btn btn-light" id="print">Print Request</button>
+                <button type="button" class="btn btn-light" id="print" onclick="printRequest()">Print Request</button>
                 <button type="button" class="btn btn-light" id="clearRequest">Clear Request</button>
         </fieldset>
     </header>
@@ -78,11 +78,11 @@
                                         <fieldset class="border p-2">
                                             <legend class="w-auto">Cold Drink?</legend>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" disabled name="coldDrink" id="yes" value="Yes"/>
+                                                    <input class="form-check-input" type="radio" name="coldDrink" id="yes" value="Yes"/>
                                                     <label class="form-check-label" for="Yes">Yes</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" disabled name="coldDrink" id="no" value="No"/>
+                                                    <input class="form-check-input" type="radio" name="coldDrink" id="no" value="No"/>
                                                     <label class="form-check-label" for="No">No</label>
                                                 </div>
                                         </fieldset>
@@ -158,3 +158,8 @@
 </body>
 
 <!-- Include JavaScript-->
+<script>
+    function printRequest(){
+        window.print();
+    }
+</script>
