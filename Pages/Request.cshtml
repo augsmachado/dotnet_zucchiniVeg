@@ -1,0 +1,160 @@
+@page
+@model RequestModel
+@{
+    ViewData["Title"] = "Request";
+}
+
+<body>
+    <header>
+        <fieldset class="border p-2">
+            <legend class="w-auto"></legend>
+                <button type="button" class="btn btn-light" id="makeRequest">Make Request</button>
+                <button types="button" class="btn btn-light" id="showRequest">Show Request</button>
+                <button type="button" class="btn btn-light" id="saveRequest">Save Request</button>
+                <button type="button" class="btn btn-light" id="print">Print Request</button>
+                <button type="button" class="btn btn-light" id="clearRequest">Clear Request</button>
+        </fieldset>
+    </header>
+
+    <div class="container-fluid">
+        <form class="form-group" id="formRequest">
+            <div class="row" id="left">
+                <div class="col-sm-7">
+                    <div id="userData">
+                        <fieldset class="border p-2">
+                            <legend class="w-auto">Client Data</legend>
+                                <label for="clientName">Client name</label>
+                                <input class="form-control" type="text" name="name" id="name"/>
+                                <label for="codRequest">Code request</label>
+                                <input class="form-control" type="number" id="codRequest"/>
+                        </fieldset>
+                    </div>
+
+                    <div class="form-group" id="Request">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <fieldset class="border p-2">
+                                    <legend class="w-auto">Snack type</legend>
+                                        <select class="form-control" id="snackType">
+                                            <option value="tofu">Zucchini's Tofu</option>
+                                            <option value="tomatoSauce">Zucchini's Tomato sauce</option>
+                                            <option value="roast">Zucchini's Roast</option>
+                                            <option value="grilled">Zucchini's Grilled</option>
+                                        </select>
+                                </fieldset>
+                            </div>
+                            <div class="col-sm-4">
+                                <fieldset class="border p-2">
+                                    <legend class="w-auto">Additional</legend>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="additional" id="yes" value="Yes"/>
+                                            <label class="form-check-label" for="Yes">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="additional" id="no" value="No"/>
+                                            <label class="form-check-label" for="No">No</label>
+                                        </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <fieldset class="border p-2">
+                                            <legend class="w-auto">Drinks</legend>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="drink" id="yes" value="Yes"/>
+                                                    <label class="form-check-label" for="Yes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="drink" id="no" value="No"/>
+                                                    <label class="form-check-label" for="No">No</label>
+                                                </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-sm-6" id="coldDrink">
+                                        <fieldset class="border p-2">
+                                            <legend class="w-auto">Cold Drink?</legend>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" disabled name="coldDrink" id="yes" value="Yes"/>
+                                                    <label class="form-check-label" for="Yes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" disabled name="coldDrink" id="no" value="No"/>
+                                                    <label class="form-check-label" for="No">No</label>
+                                                </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <fieldset class="border p-2">
+                                            <legend class="w-auto">Drink type</legend>
+                                                <select class="form-control" id="snackType">
+                                                    <option value="orange">Orange Juice</option>
+                                                    <option value="strawberry">Strawberry Juice</option>
+                                                    <option value="lemonade">Lemonade</option>
+                                                    <option value="watermelon">Watermelon Juice</option>
+                                                </select>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <fieldset class="border p-2">
+                                            <legend class="w-auto">Date request</legend>
+                                                <input class="form-control" type="date" id="dateRequest"/>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-4" id="additionalDiv" >
+                                <fieldset class="border p-2">
+                                    <legend class="w-auto">Additional</legend>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="ketchup" value="Ketchup"/>
+                                            <label class="form-check-label" for="Ketchup">Ketchup</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="mustard" value="Mustard"/>
+                                            <label class="form-check-label" for="Mustard">Mustard</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="mayonnaise" value="Mayonnaise"/>
+                                            <label class="form-check-label" for="Mayonnaise">Mayonnaise</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="frenchFries" value="French Fries"/>
+                                            <label class="form-check-label" for="French Fries">French Fries</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="sauce" value="Sauce"/>
+                                            <label class="form-check-label" for="Chilli Pepper">Chilli Pepper</label>
+                                        </div> 
+                                 </fieldset>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <fieldset class="border p-2">
+                                    <legend class="w-auto">Observation</legend>
+                                        <textarea class="form-control" id="Observation" rows="3"></textarea>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5" id="right">
+                    <fieldset class="border p-2">
+                        <legend class="w-auto">Request:</legend>
+                            <textarea class="form-control" id="requestComposition" name="requestComposition" rows="27" disabled>
+                            The request data will be shown here.
+                            </textarea>
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+<!-- Include JavaScript-->
