@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/unitaeducacional/Documents/zzzPROG/abobrinhaVeg/abobrinhaVeg.csproj": {}
+    "/Users/unitaeducacional/Documents/zzzPROG/zucchiniVeg/abobrinhaVeg.csproj": {}
   },
   "projects": {
-    "/Users/unitaeducacional/Documents/zzzPROG/abobrinhaVeg/abobrinhaVeg.csproj": {
+    "/Users/unitaeducacional/Documents/zzzPROG/zucchiniVeg/abobrinhaVeg.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/unitaeducacional/Documents/zzzPROG/abobrinhaVeg/abobrinhaVeg.csproj",
+        "projectUniqueName": "/Users/unitaeducacional/Documents/zzzPROG/zucchiniVeg/abobrinhaVeg.csproj",
         "projectName": "abobrinhaVeg",
-        "projectPath": "/Users/unitaeducacional/Documents/zzzPROG/abobrinhaVeg/abobrinhaVeg.csproj",
+        "projectPath": "/Users/unitaeducacional/Documents/zzzPROG/zucchiniVeg/abobrinhaVeg.csproj",
         "packagesPath": "/Users/unitaeducacional/.nuget/packages/",
-        "outputPath": "/Users/unitaeducacional/Documents/zzzPROG/abobrinhaVeg/obj/",
+        "outputPath": "/Users/unitaeducacional/Documents/zzzPROG/zucchiniVeg/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

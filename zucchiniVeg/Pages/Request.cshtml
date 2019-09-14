@@ -8,11 +8,9 @@
     <header>
         <fieldset class="border p-2">
             <legend class="w-auto"></legend>
-                <button type="button" class="btn btn-light" id="makeRequest">Make Request</button>
-                <button types="button" class="btn btn-light" id="showRequest">Show Request</button>
-                <button type="button" class="btn btn-light" id="saveRequest">Save Request</button>
-                <button type="button" class="btn btn-light" id="print">Print Request</button>
-                <button type="button" class="btn btn-light" id="clearRequest">Clear Request</button>
+                <button type="button" class="btn btn-light" id="makeRequest" onclick="makeRequest()">Make Request</button>
+                <button type="button" class="btn btn-light" id="print" onclick="printRequest()">Print Request</button>
+                <button type="button" class="btn btn-light" id="clearRequest" onclick="clearRequest()">Clear Request</button>
         </fieldset>
     </header>
 
@@ -24,7 +22,7 @@
                         <fieldset class="border p-2">
                             <legend class="w-auto">Client Data</legend>
                                 <label for="clientName">Client name</label>
-                                <input class="form-control" type="text" name="name" id="name"/>
+                                <input class="form-control" type="text" name="name" id="clientName"/>
                                 <label for="codRequest">Code request</label>
                                 <input class="form-control" type="number" id="codRequest"/>
                         </fieldset>
@@ -78,11 +76,11 @@
                                         <fieldset class="border p-2">
                                             <legend class="w-auto">Cold Drink?</legend>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" disabled name="coldDrink" id="yes" value="Yes"/>
+                                                    <input class="form-check-input" type="radio" name="coldDrink" id="yes" value="Yes"/>
                                                     <label class="form-check-label" for="Yes">Yes</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" disabled name="coldDrink" id="no" value="No"/>
+                                                    <input class="form-check-input" type="radio" name="coldDrink" id="no" value="No"/>
                                                     <label class="form-check-label" for="No">No</label>
                                                 </div>
                                         </fieldset>
@@ -90,7 +88,7 @@
                                     <div class="col-sm-12">
                                         <fieldset class="border p-2">
                                             <legend class="w-auto">Drink type</legend>
-                                                <select class="form-control" id="snackType">
+                                                <select class="form-control" id="drinkType">
                                                     <option value="orange">Orange Juice</option>
                                                     <option value="strawberry">Strawberry Juice</option>
                                                     <option value="lemonade">Lemonade</option>
@@ -107,9 +105,9 @@
                                 </div>
                             </div>
                             
-                            <div class="col-sm-4" id="additionalDiv" >
+                            <div class="col-sm-4" id="additionalType" >
                                 <fieldset class="border p-2">
-                                    <legend class="w-auto">Additional</legend>
+                                    <legend class="w-auto">Additional type</legend>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" id="ketchup" value="Ketchup"/>
                                             <label class="form-check-label" for="Ketchup">Ketchup</label>
@@ -129,6 +127,10 @@
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" id="sauce" value="Sauce"/>
                                             <label class="form-check-label" for="Chilli Pepper">Chilli Pepper</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="mozzarella" value="Mozzarella"/>
+                                            <label class="form-check-label" for="Mozzarella">Mozzarella</label>
                                         </div> 
                                  </fieldset>
                             </div>
@@ -158,3 +160,18 @@
 </body>
 
 <!-- Include JavaScript-->
+<script type="text/javascript">
+    function makeRequest(){
+        alert("Thank you!");
+        printRequest();
+        window.location.href=window.location.href;
+    }
+    
+    function printRequest(){
+        window.print();
+    }
+
+    function clearRequest(){
+        window.location.href=window.location.href;
+    }
+</script>
